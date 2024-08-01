@@ -83,3 +83,34 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 1024px) {
+    .left, .right {
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+
+    .right {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .top, .photo {
+        text-align: center;
+    }
+
+    .photo img {
+        width:90%
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .ingredients, .recipe, .bottom {
+        margin: 10px;
+    }
+}
+
