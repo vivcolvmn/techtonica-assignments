@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    windo.scrollTo(0, 0);
+    window.scrollTo(0, 0);
     const ingredientsElement = document.querySelector(".ingredients");
     const recipeElement = document.querySelector(".recipe");
     const bottomElement = document.querySelector(".bottom");
@@ -7,16 +7,17 @@ document.addEventListener("DOMContentLoaded", function() {
     const topElement = document.querySelector(".top");
     const photoElement = document.querySelector(".photo");
 
-    h1Element.innerHTML = "<img src='./resources.title.png'>";
+
+    h1Element.innerHTML = "<img src='./resources/title.png'>"
 
     function fadeInIngredients() {
         return new Promise((resolve) => {
             ingredientsElement.style.opacity = "1";
             ingredientsElement.style.transform = "translateX(0)";
 
-            ingredientsElement.addEventListener("transitioned", function() {
+            ingredientsElement.addEventListener("transitionend", function() {
                 resolve();
-            }, {once: true});
+            }, { once: true });
         });
     }
 
@@ -25,20 +26,20 @@ document.addEventListener("DOMContentLoaded", function() {
             recipeElement.style.opacity = "1";
             recipeElement.style.transform = "translateX(0)";
 
-            recipeElement.addEventListener("transitioned", function() {
+            recipeElement.addEventListener("transitionend", function() {
                 resolve();
-            }, {once: true});
+            }, { once: true });
         });
     }
 
-    function fadeInBottom () {
+    function fadeInBottom() {
         return new Promise((resolve) => {
             bottomElement.style.opacity = "1";
             bottomElement.style.transform = "translateX(0)";
 
-            bottomElement.addEventListener("transitioned", function() {
+            bottomElement.addEventListener("transitionend", function() {
                 resolve();
-            }, {once: true});
+            }, { once: true });
         });
     }
 
@@ -59,4 +60,4 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     setTimeout(runAnimations, 250);
-})
+});

@@ -4,7 +4,7 @@ body {
     line-height: 1.6;
     font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;
-    color: #333
+    color: #333;
 }
 
 h1 {
@@ -21,7 +21,7 @@ h1 {
 .description {
     max-width: 600px;
     font-style: italic;
-    display: flexbox; /* should this be display: flex? */
+    display: flexbox;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -46,12 +46,6 @@ p {
     margin-left: 30px;
 }
 
-.top, .photo {
-    opacity: 0;
-    transform: translateY(20%);
-    transition: opacity 2s ease-out, transform 2s ease-out;
-}
-
 .photo {
     display: flex;
     flex-direction: column;
@@ -63,29 +57,26 @@ p {
 }
 
 .photo img {
-    width:75%;
+    width: 75%;
     max-width: 100%;
     height: auto;
 }
 
 .ingredients, .recipe, .bottom {
-    margin:20px;
+    margin: 20px;
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transform: translateX(-30%);
-    transition: opacity 2s ease-out, transform 2s ease-out;
 }
 
 ul, ol {
-    padding: 20px;
+    padding-left: 20px;
 }
 
 a {
-    color: #007bff;
+    color: #007BFF;
     text-decoration: none;
 }
 
@@ -111,7 +102,7 @@ a:hover {
     }
 
     .photo img {
-        width:90%
+        width: 90%;
     }
 
     h1 {
@@ -156,11 +147,23 @@ a:hover {
     }
 
     .photo img {
-         width: 100%;
+        width: 100%;
     }
 
     .ingredients, .recipe, .bottom {
         padding: 8px;
         margin: 3px;
     }
+}
+
+.ingredients, .recipe, .bottom {
+    opacity: 0;
+    transform: translateX(-30%);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.top, .photo {
+    opacity: 0;
+    transform: translateY(20%);
+    transition: opacity 2s ease-out, transform 2s ease-out;
 }
