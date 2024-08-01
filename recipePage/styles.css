@@ -137,3 +137,21 @@ a:hover {
     }
 }
 
+@media (max-width: 320px) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 0.8em;
+    }
+
+    .photo img {
+         width: 100%;
+    }
+
+    .ingredients, .recipe, .bottom {
+        padding: 8px;
+        margin: 3px;
+    }
+}
