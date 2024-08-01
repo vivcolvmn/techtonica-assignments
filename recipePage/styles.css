@@ -21,7 +21,7 @@ h1 {
 .description {
     max-width: 600px;
     font-style: italic;
-    display: flexbox;
+    display: flexbox; /* should this be display: flex? */
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -44,6 +44,12 @@ p {
 
 .right {
     margin-left: 30px;
+}
+
+.top, .photo {
+    opacity: 0;
+    transform: translateY(20%);
+    transition: opacity 2s ease-out, transform 2s ease-out;
 }
 
 .photo {
@@ -69,6 +75,9 @@ p {
     border-radius: 8px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateX(-30%);
+    transition: opacity 2s ease-out, transform 2s ease-out;
 }
 
 ul, ol {
@@ -154,16 +163,4 @@ a:hover {
         padding: 8px;
         margin: 3px;
     }
-}
-
-.ingredients, .recipe, .bottom {
-    opacity: 0;
-    transform: translateX(-30%);
-    transition: opacity 2s ease-out, transform 2s ease-out;
-}
-
-.top, .photo {
-    opacity: 0;
-    transform: translateY(20%);
-    transition: opacity 2s ease-out, transform 2s ease-out;
 }
