@@ -51,5 +51,12 @@ document.addEventListener("DOMContentLoaded", function() {
         photoElement.style.transform = "translateY(0)";
     }
 
-    
+    async function runAnimations() {
+        await fadeInIngredients();
+        await fadeInRecipe();
+        await fadeInBottom();
+        fadeInHeaderAndPhoto();
+    }
+
+    setTimeout(runAnimations, 250);
 })
