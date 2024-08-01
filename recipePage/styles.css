@@ -155,3 +155,15 @@ a:hover {
         margin: 3px;
     }
 }
+
+.ingredients, .recipe, .bottom {
+    opacity: 0;
+    transform: translateX(-30%);
+    transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.top, .photo {
+    opacity: 0;
+    transform: translateY(20%);
+    transition: opacity 2s ease-out, transform 2s ease-out;
+}
