@@ -31,5 +31,16 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    function fadeInBottom () {
+        return new Promise((resolve) => {
+            bottomElement.style.opacity = "1";
+            bottomElement.style.transform = "translateX(0)";
+
+            bottomElement.addEventListener("transitioned", function() {
+                resolve();
+            }, {once: true});
+        });
+    }
+
     
 })
