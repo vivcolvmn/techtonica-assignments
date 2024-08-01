@@ -8,4 +8,17 @@ document.addEventListener("DOMContentLoaded", function() {
     const photoElement = document.querySelector(".photo");
 
     h1Element.innerHTML = "<img src='./resources.title.png'>";
+
+    function fadeInRecipes() {
+        return new Promise((resolve) => {
+            ingredientsElement.style.opacity = "1";
+            ingredientsElement.style.transform = "translateX(0)";
+
+            ingredientsElement.addEventListener("transitioned", function() {
+                resolve();
+            }, {once: true});
+        });
+    }
+
+    
 })
