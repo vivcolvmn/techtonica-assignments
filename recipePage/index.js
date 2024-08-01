@@ -9,12 +9,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
     h1Element.innerHTML = "<img src='./resources.title.png'>";
 
-    function fadeInRecipes() {
+    function fadeInIngredients() {
         return new Promise((resolve) => {
             ingredientsElement.style.opacity = "1";
             ingredientsElement.style.transform = "translateX(0)";
 
             ingredientsElement.addEventListener("transitioned", function() {
+                resolve();
+            }, {once: true});
+        });
+    }
+
+    function fadeInRecipe() {
+        return new Promise((resolve) => {
+            recipeElement.style.opacity = "1";
+            recipeElement.style.transform = "translateX(0)";
+
+            recipeElement.addEventListener("transitioned", function() {
                 resolve();
             }, {once: true});
         });
