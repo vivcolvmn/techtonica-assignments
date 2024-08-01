@@ -42,5 +42,14 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    function fadeInHeaderAndPhoto() {
+        h1Element.style.opacity = "1";
+        h1Element.style.transform = "translateY(0)";
+        topElement.style.opacity = "1";
+        topElement.style.transform = "translateY(0)";
+        photoElement.style.opacity = "1";
+        photoElement.style.transform = "translateY(0)";
+    }
+
     
 })
